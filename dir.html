@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/>
+		<link rel="stylesheet" href="css/bootstrap.css"/>
+		<link rel="icon" href="acgn.ico" type="image/x-icon" />
+		<title>缘·二次元</title>
+		<embed src="cloud/mp.mp3" hidden="true" autostart="true" loop="true">
+		<script src="http://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script> 
+		<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.0.min.js"></script> 
+		<script>
+		　　L2Dwidget.init({ 
+		　　"model": {jsonPath:"https://unpkg.com/live2d-widget-model-miku@1.0.5/assets/miku.model.json","scale": 1 }, 
+		　　"display": { "position": "left", "width": 150, "height": 300,"hOffset": 0, "vOffset": -20 }, 
+		　　"mobile": { "show": true, "scale": 0.5 }, 
+		　　"react": { "opacityDefault": 0.7, "opacityOnHover": 0.2 } });
+		</script> 
+		<script src="http://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			//点击产生爱心
+			!function(e, t, a) {
+				function r() {
+					for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");
+					requestAnimationFrame(r)
+				}
+				function n() {
+					var t = "function" == typeof e.onclick && e.onclick;
+					e.onclick = function(e) {
+						t && t(),
+						o(e)
+					}
+				}
+				function o(e) {
+					var a = t.createElement("div");
+					a.className = "heart",
+					s.push({
+						el: a,
+						x: e.clientX - 5,
+						y: e.clientY - 5,
+						scale: 1,
+						alpha: 1,
+						color: c()
+					}),
+					t.body.appendChild(a)
+				}
+				function i(e) {
+					var a = t.createElement("style");
+					a.type = "text/css";
+					try {
+						a.appendChild(t.createTextNode(e))
+					} catch(t) {
+						a.styleSheet.cssText = e
+					}
+					t.getElementsByTagName("head")[0].appendChild(a)
+				}
+				function c() {
+					return "rgb(" + ~~ (255 * Math.random()) + "," + ~~ (255 * Math.random()) + "," + ~~ (255 * Math.random()) + ")"
+				}
+				var s = [];
+				e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame ||
+				function(e) {
+					setTimeout(e, 1e3 / 60)
+				},
+				i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"),
+				n(),
+				r()
+			} (window, document);
+		</script>
+		<script language="javascript">
+			function test(){
+				if(document.a.name.value.length==0){
+					alert("姓名不能为空");
+					document.a.name.focus();
+					return false;
+				}
+				if(document.a.email.value.length==0){
+					alert("邮箱不能为空");
+					document.a.email.focus();
+					return false;
+				}
+				if(document.a.QQ.value.length==0){
+					alert("QQ不能为空");
+					document.a.QQ.focus();
+					return false;
+				}
+			}
+		</script>
+		<style type="text/css">
+			.background{
+				background-color:rgba(255,255,255,0.7) !important;
+			}
+			body{
+				background-image: url(img/background.jpg);
+				background-repeat: no-repeat;
+				margin: 0px;
+				padding: 0px;
+				background-size: cover;
+			}
+			.font_logo{
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-image: url(img/font_logo_background.jpg);
+				background-repeat: no-repeat;
+				font-size: 30px;
+			}
+			.dotton_font{
+				font-size: 10px;
+			}
+			.vintage{
+			background: #EEE url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC) repeat;
+			text-shadow: 5px -5px black, 4px -4px white;
+			font-weight: bold;
+			-webkit-text-fill-color: transparent;
+			-webkit-background-clip: text 
+			}
+			.testButton{
+				color:rgb(0, 0, 0);
+				font-size:14px;
+				padding-top:13px;
+				padding-bottom:13px;
+				padding-left:40px;
+				padding-right:40px;
+				border-width:0px;
+				border-color:rgb(227, 145, 224);
+				border-style:inset;
+				border-radius:0px;
+				background-color:rgb(177, 230, 230);
+				background:-webkit-gradient(linear,0% 0%,0% 100%,from(#ff9efc),to(#e7eb7c))
+			}
+			.testButton:hover{
+				color:#ffffff;
+				background-color:#78c300;
+				border-color:#c5e591;
+			}
+		</style>
+	</head>
+	<body>
+		<!--logo-->
+		<div class="container">
+			<nav class="navbar background sticky-top">
+			  <a class="navbar-brand font_logo" href="index.html">
+			    缘
+				<img src="img/logo.jpg" width="30" height="30" class="rounded-circle img-fluid" alt="">
+			    二次元
+			  </a>
+			</nav>
+		</div>
+		<div class="container"><br></div>
+		<!--栅格-->
+		<div class="container">
+			<div class="row">
+				<!--导航栏-->
+				<div class="col-lg-2 col-sm-12 background">
+					<br /><br />
+					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					  <a class="nav-link text-dark active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">虚拟歌姬排行榜</a>
+					  <a class="nav-link text-dark" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">2020新番推荐</a>
+					  <a class="nav-link text-dark" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">二次元cp榜</a>
+					  <a class="nav-link text-dark" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">加入我们</a>
+					</div>
+					<br /><br />
+				</div>
+				<div class="col-lg-10 col-sm-12 background">
+					<div class="tab-content" id="v-pills-tabContent">
+						<!--虚拟歌姬排行榜-->
+						<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+							<h2 class="vintage text-center">虚拟歌姬排行榜</h2><br>
+							<br>
+							<div class="media">
+							  <img class="align-self-center mr-4 rounded-circle" src="img/chuyin.jpg" alt="Generic placeholder image">
+							  <div class="media-body">
+							    <h5 class="mt-0 text-center">TOP.1 初音未来</h5>
+							    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;初音未来（初音ミク），通常简称为“初音”。初音未来原指CRYPTON FUTURE MEDIA以Yamaha的VOCALOID系列语音合成程序为基础开发的音源库（暨该程序的数据包），音源数据资料来自于藤田咲。CRYPTON突破性地在包装上印刷抢眼的人物肖像，并意指“销售的并非软件而是歌手”而达到推广的目的，其效果十分显著。随着“初音未来”声库的发售，这种成功的营销方式大幅改变了电子音乐人对于音乐业的认知和整个行业的格局。在衍生文化现象后，初音未来也可指代包装封面上的那位葱色头发的少女形象，还是时常大展歌喉的活跃在动画漫画中的“人气歌手”。 </p>
+							    <p class="mb-0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;代表作：千本樱，初音未来的消失，甩葱歌</p>
+							  </div>
+							</div>
+							<br />
+							<div class="media">
+							  <div class="media-body">
+							    <h5 class="mt-0 mb-1 text-center">TOP.2 KAITO</h5>
+							    <p class="m-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;头发跟瞳孔都是优雅的海蓝色,看起来非常帅气.海蓝色的眼珠,加上爽朗率直的眼神,衬托出其正统派大哥的名声.KAITO的风衣设计非常简单,整体为淡蓝色(或白色),只在衣服边缘处以深蓝色的线条作了修饰.不过话虽如此,但如此风格却更能衬托出其苗条的身材曲线,巨大的休克是这件白风衣的最大特征.在外在装饰设定方面,大哥的围巾有多种用途,其中又以"裸围巾"这一必杀技为出名.V3的风衣增加了装饰，围巾也变成了半透明的，边上有金色装饰，鞋子也从原来的板鞋变成了靴子（曾被吐槽为雨靴……）。顺带一提风衣里的衣服也有了设定，紧身的，样式是黑色无袖高领。</p>
+							  </div>
+							  <img class="mx-3 rounded-circle align-self-center" src="img/KAITO.jpg" alt="Generic placeholder image">
+							</div>
+							<br />
+							<div class="media">
+							  <img class="align-self-center mr-4 rounded-circle" src="img/jingyin.jpg" alt="Generic placeholder image">
+							  <div class="media-body">
+							    <h5 class="mt-0 text-center">TOP.3 镜音双子</h5>
+							    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;镜音铃、镜音连是CRYPTON FUTURE MEDIA以Yamaha的VOCALOID 2语音合成引擎为基础开发贩售的虚拟歌手软件角色主唱系列的第二作。于2007年12月27日发售，于2008年7月上旬发售更新版“act2”。两个版本也是开放价格，官方估计系列软件实际价格约15,750日元。 </p>
+							  </div>
+							</div>
+							<br />
+							<div class="media">
+							  <div class="media-body">
+							    <h5 class="mt-0 mb-1 mt-4 text-center">TOP.4 洛天依</h5>
+							    <p class="m-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;洛天依，中国内地虚拟歌手，是以Yamaha公司的VOCALOID3语音合成引擎为基础制作的全世界第一款VOCALOID中文声库和虚拟形象。洛天依的声库于2012年7月12日在第八届中国国际动漫游戏博览会（CCG EXPO）上正式推出，音源是国内配音演员山新，形象由“MOTH”初稿设计，经ideolo改编整合后完成。</p>
+								<p class="m-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2016年2月登上湖南卫视小年夜春晚，与杨钰莹合唱《花儿纳吉》，成为首位登上中国主流电视媒体的虚拟歌手。随后洛天依又登上2016第十一届金鹰节互联盛典、2016－2017湖南卫视跨年晚会。2018年3月31日，和京剧名家王珮瑜在中央电视台综合频道《经典咏流传》跨界合作演绎《但愿人长久》。</p>
+								</div>
+							  <img class="mx-3 rounded-circle align-self-center" src="img/luotianyi.jpg" alt="Generic placeholder image">
+							</div>
+							<br />
+							<div class="media">
+							  <img class="align-self-center mr-4 rounded-circle" src="img/qiezi.jpg" alt="Generic placeholder image">
+							  <div class="media-body">
+							    <h5 class="mt-0 text-center">TOP.5 神威茄子</h5>
+							    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;神威 がくぽI（Gakupo）中文名为神威乐步。神威是姓，がくぽ是名字。是由Internet(株式会社インターネット)以Yamaha的VOCALOID系列语音合成程序为基础开发的虚拟男性歌手软件。</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;声源：Gackt</p>
+								<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;诞生日：2008年4月1日</p>
+							  </div>
+							</div>
+							<br />
+						</div>
+						<!--2020新番推荐-->
+						<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+							<h2 class="vintage text-center">2020新番推荐</h2><br>
+							<table class="table table-striped">
+							  <thead>
+							    <tr>
+							      <th scope="col"></th>
+							      <th scope="col">番名</th>
+							      <th scope="col">评价</th>
+							      <th scope="col">看番</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <th scope="row">1</th>
+							      <td>异种族风俗娘评鉴指南</td>
+							      <td>这部1月新番，想必各位应该都有一定的了解，讲述的是在一个各种族共存的世界里，一个人类和一个精灵通过亲身体验，给各种族的姑娘评级的故事，最近，还因为遭到投诉，被日本电视台下架呢。</td>
+							      <td><a class="btn btn-outline-dark" href="https://www.yhdmp.com/showp/20117.html" role="button">点我跳转</a></td>
+							    </tr>
+							    <tr>
+							      <th scope="row">2</th>
+							      <td>异度侵入</td>
+							      <td>这部动漫题材非常新颖，讲述了人们可以通过使用一种可以分析人类的杀意的仪器来破案的故事，应该算是一个科幻推理番，也是蕾丝非常喜欢并且推荐的一部新番，剧情很精彩！</td>
+							      <td><a class="btn btn-outline-dark" href="https://www.bilibili.com/bangumi/play/ss29310" role="button">点我跳转</a></td>
+							    </tr>
+							    <tr>
+							      <th scope="row">3</th>
+							      <td>理科生坠入情网故尝试证明</td>
+							      <td>这部动漫的名字是真的独特，讲述了两个高智商理科生为了证明自己喜欢对方，而采取的一系列证明推算的有趣故事，有一种辉夜大小姐的味道，不知道会不会和辉夜大小姐一样受欢迎呢？</td>
+							      <td><a class="btn btn-outline-dark" href="https://www.bilibili.com/bangumi/media/md28223860/?from=search&seid=2085792305640500011" role="button">点我跳转</a></td>
+							    </tr>
+							  </tbody>
+							</table>
+						</div>
+						<!--二次元cp榜-->
+						<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+							<h2 class="vintage text-center">二次元cp榜</h2><br>
+							<ul class="list-group text-center">
+							  <li class="list-group-item">TOP.1工藤新一&毛利兰<br><img src="img/1.jpg" alt="..." class="rounded img-fluid"></li>
+							  <li class="list-group-item">TOP.2服部平次&远山和叶<br><img src="img/2.jpg" alt="..." class="rounded img-fluid"></li>
+							  <li class="list-group-item">TOP.3陆雪琪&张小凡<br><img src="img/3.jpg" alt="..." class="rounded img-fluid"></li>
+							  <li class="list-group-item">TOP.4黑羽快斗&中森青子<br><img src="img/4.jpg" alt="..." class="rounded img-fluid"></li>
+							  <li class="list-group-item">TOP.5玄月&沧月<br><img src="img/5.jpg" alt="..." class="rounded img-fluid"></li>
+							</ul>
+							<br />
+						</div>
+						<!--表单-->
+						<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+							<h2 class="vintage text-center">加入我们</h2>
+							<h5 class="text-center text-black-50">——欢迎各位加入我们，一起收集各种奇奇怪怪的榜单</h5>
+							<br>
+							<form  name="a" onsubmit="return test()">
+								<div class="form-group row">
+									<label for="inputName" class="col-sm-2 col-form-label">昵称</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" name="name" id="inputName" placeholder="请输入您的昵称">
+									</div>
+								</div>
+								<fieldset class="form-group">
+									<div class="row">
+										<legend class="col-form-label col-sm-2 pt-0">性别</legend>
+										<div class="col-sm-10">
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+												<label class="form-check-label" for="gridRadios1">
+												男
+												</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+												<label class="form-check-label" for="gridRadios2">
+												女
+												</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+												<label class="form-check-label" for="gridRadios3">
+												保密
+												</label>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								<div class="form-group row">
+									<label for="inputEmail3"  class="col-sm-2 col-form-label">邮箱</label>
+									<div class="col-sm-10">
+										<input type="email" class="form-control" name="email" id="inputEmail3" placeholder="请输入邮箱号">
+										<small id="emailHelp" class="form-text text-muted">我们不会在未经您同意的情况下泄露您的邮箱信息</small>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="exampleFormControlSelect1" class="col-sm-2 col-form-label">您擅长的方面</label>
+									<div class="col-sm-10 float-right">
+										<select class="form-control" id="exampleFormControlSelect1">
+											<option>开发</option>
+											<option>美工</option>
+											<option>文案</option>
+											<option>审核</option>
+											<option>后期</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group row">
+									<label for="inputQQ" class="col-sm-2 col-form-label">QQ</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" name="QQ" id="inputQQ" placeholder="请输入您的QQ号码">
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-sm-10 text-center">
+										<button type="submit" class="btn testButton ">提交</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container"><br></div>
+		<!--底部-->
+		<div class="container background dotton_font text-center">
+			web期末课设<br>
+			计算机L班 牟宇璇<br>
+			学号：2018030402072
+		</div>
+		<audio src="cloud/mp.mp3" autoplay="true" playcount="-1" loop="true"></audio>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
